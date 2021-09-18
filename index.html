@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+        }
+        body{
+            width: 600px;
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <button class="move move1" onclick="x_or_o(1)">
+        
+    <button class="move move2" onclick="x_or_o(2)">
+        
+    </button>
+    <button class="move move3" onclick="x_or_o(3)">
+        
+    <button class="move move4" onclick="x_or_o(4)">
+
+    </button>
+    <button class="move move5" onclick="x_or_o(5)">
+        
+    </button>
+    <button class="move move6" onclick="x_or_o(6)">
+        
+    </button>
+    <button class="move move7" onclick="x_or_o(7)">
+        
+    </button>
+    <button class="move move8" onclick="x_or_o(8)">
+        
+    </button>
+    <button class="move move9" onclick="x_or_o(9)">
+        
+    </button>
+    <script>
+        let x = [];
+        let i = 0;
+        let o = [];
+        function x_or_o(point){
+            if(i==0){
+                x.push(point);  
+                document.getElementsByClassName('move' + point) [0] .innerText = 'X';
+                i++;
+            }else{
+                o.push(point);
+                document.getElementsByClassName('move' + point) [0] .innerText = 'O';
+                i--;
+            }
+        }
+
+    </script>
+</body>
+</html>
